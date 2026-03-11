@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500;
+}
+
+.glow-on-hover {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.glow-on-hover::before {
+  content: "";
+  @apply absolute inset-0 bg-white/10 translate-y-full transition-transform duration-300 ease-out;
+}
+
+.glow-on-hover:hover::before {
+  @apply translate-y-0;
+}
