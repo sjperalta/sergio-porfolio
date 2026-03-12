@@ -15,10 +15,10 @@ function App() {
   return (
     <div className="min-h-screen bg-background text-white selection:bg-primary/30 antialiased">
       <Navbar />
-      
+
       <main>
         <Hero data={portfolioData} />
-        
+
         <section id="about" className="py-24 px-6 border-y border-white/5">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
@@ -32,9 +32,15 @@ function App() {
                 <span className="text-gradient not-italic">defined by results.</span>
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                {portfolioData.bio} I specialize in bridging the gap between complex backend architectures 
+                {portfolioData.bio} I specialize in bridging the gap between complex backend architectures
                 and high-fidelity frontend experiences.
               </p>
+
+              <div className="flex justify-center mt-12">
+                <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="sergio-peralta-61592647" data-version="v1">
+                  <a className="badge-base__link LI-simple-link" href="https://hn.linkedin.com/in/sergio-peralta-61592647?trk=profile-badge"></a>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
